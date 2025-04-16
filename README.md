@@ -1,70 +1,175 @@
-# Getting Started with Create React App
+# VoteFlow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="screenshots/logo.png" alt="VoteFlow Logo" width="200"/>
+</p>
 
-## Available Scripts
+<p align="center">
+  A modern, real-time polling application built with the MERN stack
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#getting-started">Getting Started</a> •
+  <a href="#api-endpoints">API Endpoints</a> •
+  <a href="#deployment">Deployment</a> •
+  <a href="#license">License</a>
+</p>
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✨ **Modern UI Design** - Sleek, responsive interface built with Material UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📊 **Real-time Results** - See poll results update instantly as votes come in
 
-### `npm test`
+🔒 **User Authentication** - Secure signup/login system with JWT
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
 
-### `npm run build`
+⚙️ **Customizable Polls** - Set end dates, allow multiple votes, and configure privacy settings
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📝 **Multiple Question Types** - Support for single choice, multiple choice, and text responses
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+📈 **Results Dashboard** - Detailed statistics and visualizations for each poll
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Test Account:
+- Username: `demo@example.com`
+- Password: `demo123`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="center">
+  <img src="screenshots/homepage.png" alt="Homepage" width="800"/>
+  <br><em>Homepage - Create polls and see featured content</em>
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="center">
+  <img src="screenshots/create-poll.png" alt="Create Poll" width="800"/>
+  <br><em>Create Poll - Easy to use form for creating custom polls</em>
+</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="center">
+  <img src="screenshots/vote-page.png" alt="Vote Page" width="800"/>
+  <br><em>Vote Page - Clean interface for casting votes</em>
+</p>
 
-## Learn More
+<p align="center">
+  <img src="screenshots/results.png" alt="Results Page" width="800"/>
+  <br><em>Results - Real-time data visualization</em>
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+  <img src="screenshots/mobile-view.png" alt="Mobile View" width="300"/>
+  <br><em>Mobile View - Fully responsive design</em>
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tech Stack
 
-### Code Splitting
+### Frontend
+- **React** - Framework for building the user interface
+- **Material UI** - Component library for modern design
+- **React Router** - Navigation and routing
+- **Axios** - HTTP client for API requests
+- **Context API** - State management
+- **Socket.io Client** - Real-time updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend
+- **Node.js** - JavaScript runtime
+- **Express** - Web application framework
+- **MongoDB** - NoSQL database
+- **Mongoose** - MongoDB object modeling
+- **JWT** - Authentication and security
+- **Socket.io** - Real-time bidirectional event-based communication
 
-### Analyzing the Bundle Size
+## Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
+- Node.js (v14+)
+- MongoDB
+- npm or yarn
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repository
+```bash
+git clone https://github.com/dChushkov/Vote-Flow.git
+cd Vote-Flow
+```
 
-### Advanced Configuration
+2. Install backend dependencies
+```bash
+cd server
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. Install frontend dependencies
+```bash
+cd ../
+npm install
+```
 
-### Deployment
+4. Create a `.env` file in the server directory with the following variables
+```
+NODE_ENV=development
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. Start the backend server
+```bash
+cd server
+npm run dev
+```
 
-### `npm run build` fails to minify
+6. Start the frontend application
+```bash
+cd ../
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. Open your browser and navigate to `http://localhost:3000`
+
+## API Endpoints
+
+### Authentication
+- `POST /api/users/register` - Register a new user
+- `POST /api/users/login` - Login user and get token
+
+### Polls
+- `GET /api/polls` - Get all polls
+- `GET /api/polls/:id` - Get a specific poll
+- `POST /api/polls` - Create a new poll
+- `PUT /api/polls/:id` - Update a poll
+- `DELETE /api/polls/:id` - Delete a poll
+
+### Votes
+- `GET /api/polls/:id/votes` - Get all votes for a poll
+- `POST /api/polls/:id/votes` - Cast a vote on a poll
+
+## Deployment
+
+### Frontend
+The frontend can be deployed to Netlify, Vercel, or GitHub Pages.
+
+### Backend
+The backend can be deployed to Heroku, Render, or Railway.
+
+### Database
+MongoDB Atlas provides a free tier for hosting your MongoDB database.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Created By
+
+- dChushkov - [GitHub](https://github.com/dChushkov)
+
+---
+
+If you find this project useful, please consider giving it a star ⭐️ on GitHub.
