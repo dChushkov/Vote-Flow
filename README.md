@@ -1,10 +1,6 @@
 # VoteFlow
 
 <p align="center">
-  <img src="screenshots/logo.png" alt="VoteFlow Logo" width="200"/>
-</p>
-
-<p align="center">
   A modern, real-time polling application built with the MERN stack
 </p>
 
